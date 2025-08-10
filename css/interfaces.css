@@ -1,0 +1,233 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Montserrat;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+}
+html{
+    background-image: url(../img/fondo.webp); /* Cambia por la ruta de tu imagen */
+    background-size:cover; /* Ajusta la imagen para cubrir todo el fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center;  /*Centra la imagen */
+}
+.wrapper{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.container{
+    width: 95rem;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 40px;
+}
+.container .input {
+    width: 26rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .output {
+    width: 70rem;
+    height: 40rem;
+    overflow: auto;
+    position: 
+
+    display: flex;
+    align-items: center;
+}
+.output table{
+    width: 100%;
+}
+.output table td{
+    overflow: hidden;
+    text-align: center;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 10px;
+}
+.output table th{
+    padding: 10px;
+    text-align: center;
+    background: rgb(226, 226, 226);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+.output table td a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 10px;
+    transition: 0.2s ease-in-out;
+}
+.eliminar:hover {
+    color: rgb(190, 0, 0);
+}
+.editar:hover{
+    color: rgb(7, 187, 7);
+}
+form {
+    width: 100%;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+
+    background: rgb(231, 231, 231);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+form .title{
+    width: 35rem;
+    padding: 20px 32px;
+
+    overflow-wrap: break-word;
+    background: rgb(210, 210, 210);
+}
+.title h1{
+    font-size: 40px;
+    color: rgb(0, 0, 0);
+    text-align: start;
+
+    font-weight: 400;
+    letter-spacing: 3px;
+    font-family: Montserrat;
+}
+form .body{
+    width: 80%;
+    padding: 20px 40px;
+    row-gap: 9px;
+
+    text-align: start;
+    
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.body input{
+    width: 100%;
+    padding: 8px;
+    
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px #00000033;
+    transition: 0.2s ease-in-out;
+}
+.body input:focus{
+    outline: none;
+}
+.body input:hover{
+    background: rgba(230, 230, 230, 0.711);
+}
+input[type="date"]{
+    padding: 10px;
+    user-select: none;
+}
+input[type="date"]:hover{
+    cursor: pointer;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+.body label{
+    font-size: 17px;
+    font-family: Montserrat;
+}
+.icon{
+    font-size: 17px;
+    padding-right: 4px;
+}
+.button{
+    width: 100%;
+    padding: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+}
+.button a,
+.button input[type="submit"] {
+    width: max-content;
+
+    padding: 8px 20px;
+
+    color: #000;
+    font-size: 13px;
+    text-decoration: none;
+
+    border: none;
+
+    background: rgb(208, 208, 208);
+
+    transition: 0.2s ease-in-out;
+    border-radius: 5px;
+}
+.button a:hover,
+.button input[type="submit"]:hover {
+    cursor: pointer;
+    transform: scale(0.98);
+    transform-origin: center;
+    background: rgb(179, 179, 179);
+}
+
+
+@media screen and (max-width: 1300px) {
+    html, body{
+        width: 100%;
+        height: 100%;
+    }
+    .wrapper{
+        width: 100%;
+        height:67rem;
+
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .container {
+        width: 20rem;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .container .input{
+        width: 20rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container .body{
+        padding: 10px 0px;
+    }
+    .input .title h1 {
+        font-size: 28px;
+    }
+    .container .output {
+        width: 20rem;
+        height: 18rem;
+        overflow: scroll;
+    }
+    .output table{
+        font-size: 10px;
+    }
+}
